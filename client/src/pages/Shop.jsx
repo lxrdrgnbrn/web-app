@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Context } from '..';
 import BrandBar from '../components/BrandBar';
+import TypeBar from '../components/TypeBar';
 import { fetchTypes } from '../http/deviceApi';
 
 const Shop = observer(() => {
@@ -17,11 +18,11 @@ const Shop = observer(() => {
     return (
         <Container className='d-flex justify-content-between mt-5' >
             <Row>
-                <Col md={10}>
+                <Col md={5}>
                     <BrandBar/>
                 </Col>
-                <Col md={9}>
-
+                <Col md={1}>
+                    <TypeBar/>
                 </Col>
             </Row>
         </Container>

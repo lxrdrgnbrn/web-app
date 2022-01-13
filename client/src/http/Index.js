@@ -22,6 +22,12 @@ $host.interceptors.request.use(function (config)
     return config
 })
 
+$authHost.interceptors.request.use(function (config)
+{  
+    const token = localStorage.getItem('token')
+    config.headers.authorization=`Bearer ${token}`
+    return config
+})
 
 export
 {
